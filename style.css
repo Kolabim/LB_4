@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calc-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.calc {
+    opacity: 0.8;
+    width: 900px;
+    height: 850px;
+    background-color: #123528;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 120px; 
+    gap: 15px;
+    padding: 20px; 
+    padding-left: 40px;
+    border-radius: 40px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+.calc-display {
+    grid-column: 1 / span 4;
+    font-size: 72px; 
+    width: 820px;
+    padding: 12px 24px; 
+    border-radius: 10px; 
+    overflow: hidden;
+    z-index: 1;
+    background-color: #576d6e;
+}
+
+.display{
+    animation: blink 1s infinite;
+    color: rgb(5, 219, 83);
+}
+
+.calc-button {
+    font-size: 50px; 
+    width: 90%; 
+    height: 120px;
+    border: none;
+    background-color: rgb(87, 110, 93);
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 5px 5px;
+    flex-grow: 0;
+}
+
+.calc-button:hover {
+    opacity: 0.7;
+}
+
+.calc-button:active {
+    box-shadow: 6px 5px;
+    opacity: 0.5;
+}
+
+.operator {
+    background-color: rgb(157, 103, 4);
+}
+
+.equal {
+    width: 820px;
+    background-color: rgb(31, 141, 99);
+    grid-column: 1 / span 4;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0.9;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 0.9;
+    }
+}
+
